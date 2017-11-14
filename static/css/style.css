@@ -1,0 +1,23 @@
+body {
+  padding-top: 54px;
+}
+h1 {
+  color: red;
+  line-height: 5.5rem;
+}
+.profile_info{
+  text-align: center;
+}
+.social_media{
+  text-align: center;
+}
+.footer{
+  display: block;
+  font-family: FontAwesome;
+}
+.img-fluid{
+    width: 200px;
+    height: 200px;
+}
+.list-inline-item{
+      display: inline-block;
