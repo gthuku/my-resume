@@ -9,12 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <link rel="icon" href="{{ url_for('static', filename='img/george.gif') }}" type="image/x-icon"/>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.gif') }}" type="image/x-icon"/>
+  <link rel="icon" href="{{ url_for('static', filename='img/george.gif') }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.gif') }}" type="image/x-icon" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
-  {% endblock%}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> {% endblock%}
 </head>
 
 <body>
@@ -39,6 +37,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/professors">Professors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/course-directory">Course Directory</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -50,19 +56,14 @@
     </span>
 
   </div>
-<p class = "para">
-Currently an undergraduate student at the University of Delaware pursuing a degress in Accounting and Management Information Systems
-</p>
+  <p class="para">
+    Currently an undergraduate student at the University of Delaware pursuing a degress in Accounting and Management Information Systems
+  </p>
   {% for category, message in get_flashed_messages(with_categories=true) %}
-      <div class="alert alert-{{category}}">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-        {{ message }}
-      </div>
-  {% endfor %}
-  {% block page_content%}
-  {% endblock%}
-
-  {% block scripts%}
+  <div class="alert alert-{{category}}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button> {{ message }}
+  </div>
+  {% endfor %} {% block page_content%} {% endblock%} {% block scripts%}
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
